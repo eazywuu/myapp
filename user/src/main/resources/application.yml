@@ -1,0 +1,21 @@
+server:
+  port: 9000
+
+spring:
+  profiles:
+    include: param
+  datasource:
+    url: jdbc:mysql://${HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}?useSSL=false&userUnicode=true&characterEncoding=utf-8
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: ${MYSQL_DRIVER}
+  redis:
+    host: ${HOST}
+    port: ${REDIS_PORT}
+    password: ${REDIS_PASSWORD}
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto #主键自增
+      logic-delete-field: showStatus

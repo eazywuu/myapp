@@ -1,0 +1,5 @@
+xyz\eazywu\user\UserApplication.class
+xyz\eazywu\user\entity\User.class
+xyz\eazywu\user\controller\UserController.class
+xyz\eazywu\user\service\UserService.class
+xyz\eazywu\user\mapper\UserMapper.class
