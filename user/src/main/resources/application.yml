@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 8080
 
 spring:
   profiles:
@@ -13,6 +13,8 @@ spring:
     host: ${HOST}
     port: ${REDIS_PORT}
     password: ${REDIS_PASSWORD}
+    database: 0
+    timeout: 3000
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:
