@@ -17,7 +17,7 @@ public class RedisServiceImpl implements IRedisService {
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
 
-    Long seconds = RedisUtil.Seconds;
+    private Long seconds = RedisUtil.Seconds;
 
     @Override
     public void setMap(String key, Map<String, Object> value) {

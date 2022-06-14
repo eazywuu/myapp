@@ -1,7 +1,7 @@
 package xyz.eazywu.service.impl;
 
 import org.springframework.stereotype.Service;
-import xyz.eazywu.entity.Record;
+import xyz.eazywu.entity.RecordEntity;
 import xyz.eazywu.mapper.RecordMapper;
 import xyz.eazywu.service.RecordService;
 
@@ -14,12 +14,12 @@ public class RecordServiceImpl implements RecordService {
     private RecordMapper recordMapper;
 
     @Override
-    public List<Record> findByUid(Long id) {
+    public List<RecordEntity> findByUid(Long id) {
         return recordMapper.findByUid(id);
     }
 
     @Override
-    public List<Record> getTop() {
-        return null;
+    public List<RecordEntity> getTop() {
+        return recordMapper.getTop();
     }
 }

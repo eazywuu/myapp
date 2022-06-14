@@ -12,7 +12,6 @@
 
     <modules>
         <module>user</module>
-        <module>swagger</module>
         <module>common</module>
     </modules>
 

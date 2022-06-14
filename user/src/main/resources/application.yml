@@ -16,6 +16,11 @@ spring:
     database: 0
     timeout: 3000
 mybatis-plus:
+  configuration:
+    # 数据库表的字段和Java实体类的属性使用驼峰命名进行映射
+    map-underscore-to-camel-case: true
+    # 启动MyBatis-Plus日志为StdOutImpl
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:
     db-config:

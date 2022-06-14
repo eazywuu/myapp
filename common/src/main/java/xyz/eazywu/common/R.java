@@ -55,6 +55,7 @@ public class R extends HashMap<String, Object> {
 		return r;
 	}
 
+	@Override
 	public R put(String key, Object value) {
 		super.put(key, value);
 		return this;

@@ -1,6 +1,5 @@
 package xyz.eazywu.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +17,6 @@ public class IRedisController {
 
     @GetMapping("/get/{key}")
     public R getValue(@PathVariable("key") String key) {
-        return R.ok().put("value", redisService.getValue(key));
+        return R.ok("获取redis数据成功!").put("value", redisService.getValue(key));
     }
 }

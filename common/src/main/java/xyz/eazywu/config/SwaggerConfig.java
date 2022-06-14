@@ -40,7 +40,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 // 文档标题
                 .title("益智App：1+2=3")
-                // 文档相信信息
+                // 文档相关信息
                 .description("Android+Springboot分离文档")
                 // 文档版本信息
                 .version("1.0")
