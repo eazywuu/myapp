@@ -1,5 +1,6 @@
 package xyz.eazywu.service;
 
+import org.apache.ibatis.annotations.Select;
 import xyz.eazywu.entity.UserEntity;
 
 public interface UserService {
@@ -27,9 +28,30 @@ public interface UserService {
     Integer update(UserEntity user);
 
     /**
-     * TODO 获取用户做题总数
-     * @param id 用户id
-     * @return 做题总数
+     * TODO 获取今日答题记录
+     * @param uid 用户id
+     * @return 今日答题记录
      */
-    Long getTotal(Long id);
+    String getTodayRecord(Integer uid);
+
+    /**
+     * TODO 获取今日答题排名
+     * @param uid 用户id
+     * @return 今日答题排名
+     */
+    String getTodayRank(Integer uid);
+
+    /**
+     * TODO 获取总答题记录
+     * @param uid 用户id
+     * @return 总答题记录
+     */
+    String getTotalRecord(Integer uid);
+
+    /**
+     * TODO 获取总答题排名
+     * @param uid 用户id
+     * @return 总答题排名
+     */
+    String getTotalRank(Integer uid);
 }

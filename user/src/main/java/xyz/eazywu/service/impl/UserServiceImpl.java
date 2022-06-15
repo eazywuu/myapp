@@ -36,7 +36,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Long getTotal(Long id) {
-        return userMapper.getTotal(id);
+    public String getTodayRecord(Integer uid) {
+        return userMapper.getTodayRecord(uid);
+    }
+
+    @Override
+    public String getTodayRank(Integer uid) {
+        return userMapper.getTodayRank(uid);
+    }
+
+    @Override
+    public String getTotalRecord(Integer uid) {
+        return userMapper.getTotalRecord(uid);
+    }
+
+    @Override
+    public String getTotalRank(Integer uid) {
+        return userMapper.getTotalRank(uid);
     }
 }

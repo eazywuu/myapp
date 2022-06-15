@@ -30,4 +30,5 @@ public class RecordController {
     public R getTop() {
         return R.ok("查找成功!").put("top",recordService.getTop());
     }
+
 }

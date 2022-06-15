@@ -19,7 +19,7 @@ public class UserController {
         if (login == null) {
             return R.error();
         }
-        return R.ok("登录成功!").put("displayName", login.getDisplayName());
+        return R.ok("登录成功!").put("displayName", login.getDisplayName()).put("uid",login.getId());
     }
 
     @PostMapping("/register")
@@ -40,9 +40,21 @@ public class UserController {
         return R.ok("修改成功!");
     }
 
-    @GetMapping("/getTotal/{id}")
-    public R getTotal(@PathVariable("id") Long id) {
-        Long total = userService.getTotal(id);
-        return R.ok("获取做题总数成功!").put("total",total);
+    @GetMapping("/getTodayRecord/{uid}")
+    public R getTodayRecord(@PathVariable("uid") Integer uid) {
+        return R.ok("记录获取成功！").put("data",userService.getTodayRecord(uid));
+    }
+    @GetMapping("/getTodayRank/{uid}")
+    public R getTodayRank(@PathVariable("uid") Integer uid) {
+        return R.ok("记录获取成功！").put("data",userService.getTodayRank(uid));
+    }
+    @GetMapping("/getTotalRecord/{uid}")
+    public R getTotalRecord(@PathVariable("uid") Integer uid) {
+        return R.ok("记录获取成功！").put("data",userService.getTotalRecord(uid));
+    }
+    @GetMapping("/getTotalRank/{uid}")
+    public R getTotalRank(@PathVariable("uid") Integer uid) {
+        String s = userService.getTotalRank(uid);
+        return R.ok("记录获取成功！").put("data",s.substring(0,s.length() - 2));
     }
 }

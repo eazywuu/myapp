@@ -17,4 +17,5 @@ public interface RecordService {
      * @return 前10记录列表
      */
     List<RecordEntity> getTop();
+
 }

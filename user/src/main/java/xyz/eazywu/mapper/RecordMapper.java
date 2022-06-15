@@ -21,6 +21,6 @@ public interface RecordMapper extends BaseMapper<UserEntity> {
      * TODO 获取前10名做题记录
      * @return 做题记录列表
      */
-    @Select("select * from tab_record order by do_number desc limit 0,10")
+    @Select("select * from tab_record order by do_number desc limit 10")
     List<RecordEntity> getTop();
 }

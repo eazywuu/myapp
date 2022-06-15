@@ -23,9 +23,5 @@ public class RedisTest {
     public void test1() {
         System.out.println(redisService.getValue("key1"));
     }
-
-    @Test
-    public void test2() {
-        userService.getTotal(1L);
-    }
+    
 }
